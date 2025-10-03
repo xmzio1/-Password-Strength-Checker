@@ -28,3 +28,20 @@ The project aims to help users understand whether their passwords are weak, pred
    ```bash
    git clone https://github.com/username/password-checker.git
    cd password-checker
+## 📊 Example Output
+=== Password Strength Report ===
+Password: MyPass123!
+Length: 10  |  Estimated entropy: 59.52 bits
+Overall rating: Strong  |  Score metric: 3
+
+Issues found:
+ - Contains a known keyboard pattern (e.g., qwerty, 12345).
+
+Suggestions to improve your password:
+ - Make the password 12+ characters for better security.
+ - Use a passphrase instead of a short word.
+ - Mix uppercase, lowercase, numbers, and symbols.
+ - Avoid common words or keyboard sequences.
+ - Use a password manager to generate and store unique strong passwords.
+=============================
+
