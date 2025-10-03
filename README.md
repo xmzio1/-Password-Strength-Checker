@@ -1,2 +1,30 @@
-# -Password-Strength-Checker
-A simple Python tool that checks the strength of passwords and provides a comprehensive report on their security score. The goal is to help users understand the strength of their passwords and avoid using common or weak words.
+# 🔐 Password Strength Checker
+
+## 📌 Overview
+A simple **Python CLI tool** to evaluate the strength of passwords and provide a detailed security report.  
+The project aims to help users understand whether their passwords are weak, predictable, or exposed to common attack patterns.
+
+## ✨ Features
+- Calculates password strength using **entropy (log2)**.  
+- Checks for:
+  - Lowercase letters (a-z)  
+  - Uppercase letters (A-Z)  
+  - Numbers (0-9)  
+  - Special symbols (!@#...)  
+- Detects repeated characters and sequences (e.g., `aaa111`, `abcabc`).  
+- Identifies common keyboard patterns (`qwerty`, `asdf`, `12345`, etc.).  
+- Compares against a **list of 500 common passwords** (`common_passwords_500.txt`).  
+- Provides actionable suggestions to improve password security.
+
+## 🛠️ Technologies
+- **Python 3**  
+- **Regex** for pattern matching  
+- **Math / log2** for entropy calculation  
+- **Argparse** for command-line usage  
+- External **dictionary file** for common passwords
+
+## 🚀 Usage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/username/password-checker.git
+   cd password-checker
