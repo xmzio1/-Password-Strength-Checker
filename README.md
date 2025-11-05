@@ -29,4 +29,4 @@ The project aims to help users understand whether their passwords are weak, pred
    git clone https://github.com/username/password-checker.git
    cd password-checker
 
-DONE
+DONE 
