@@ -1,6 +1,6 @@
 # 🔐 Password Strength Checker
 
-## 📌 Overview
+## 📌 Overview 
 A simple **Python CLI tool** to evaluate the strength of passwords and provide a detailed security report.  
 The project aims to help users understand whether their passwords are weak, predictable, or exposed to common attack patterns.
 
