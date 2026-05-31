@@ -1,9 +1,8 @@
 import re
 import argparse
-from pathlib import Path
+from pathlib import Path  # ✅ استيراد Path مباشرة
 
 def entropy_bits(password: str) -> float:
-    # Simple entropy estimation based on character variety and length
     charset = 0
     if re.search(r'[a-z]', password):
         charset += 26
@@ -12,13 +11,12 @@ def entropy_bits(password: str) -> float:
     if re.search(r'[0-9]', password):
         charset += 10
     if re.search(r'[^a-zA-Z0-9]', password):
-        charset += 32  # Approximate number of symbols
+        charset += 32
     if charset == 0:
         return 0.0
     return len(password) * (charset.bit_length())
 
 def repeated_sequence_score(password: str) -> int:
-    # Penalize repeated sequences (e.g., "aaa", "abcabc")
     for i in range(1, len(password)//2 + 1):
         seq = password[:i]
         if seq * (len(password)//i) == password:
@@ -28,7 +26,6 @@ def repeated_sequence_score(password: str) -> int:
     return 0
 
 def keyboard_pattern_score(password: str) -> int:
-    # Penalize common keyboard patterns
     patterns = ['qwerty', 'asdf', 'zxcv', '12345', 'password']
     for pat in patterns:
         if pat in password.lower():
@@ -159,3 +156,6 @@ def main():
 
     report = grade_password(pw, common_set)
     pretty_print_report(report)
+
+if __name__ == "__main__":  # ✅ حماية نقطة الدخول
+    main()
