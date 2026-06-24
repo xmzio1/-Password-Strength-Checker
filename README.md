@@ -5,7 +5,7 @@ A simple **Python CLI tool** to evaluate the strength of passwords and provide a
 The project aims to help users understand whether their passwords are weak, predictable, or exposed to common attack patterns.
 
 ## ✨ Features
-- Calculates password strength using **entropy (log2)**.  
+- Calculates password strength using **entropy (log2)**.   
 - Checks for:
   - Lowercase letters (a-z)  
   - Uppercase letters (A-Z)  
